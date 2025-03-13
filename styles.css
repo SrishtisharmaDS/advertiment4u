@@ -24,6 +24,24 @@ header h1 {
     font-size: 2em;
 }
 
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
 /* ZIG-ZAG FEATURE SECTION */
 .features {
     padding: 60px 20px;
@@ -46,7 +64,7 @@ header h1 {
     line-height: 1.8;
     font-weight: 400;
 }
-.reverse {
+.feature:nth-child(even) {
     flex-direction: row-reverse;
 }
 
@@ -63,18 +81,16 @@ header h1 {
 .cta:hover {
     background: #007944;
 }
-.whatsapp {
-    background: #25D366;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .feature {
+    nav ul {
         flex-direction: column;
         text-align: center;
     }
-    .feature.reverse {
+    .feature {
         flex-direction: column;
+        text-align: center;
     }
     .feature img, .feature-text {
         width: 100%;
