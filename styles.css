@@ -12,7 +12,7 @@ body {
     text-align: center;
 }
 
-/* Header */
+/* ✅ HEADER FIXES */
 header {
     background: linear-gradient(45deg, #00a859, #007944);
     color: white;
@@ -24,14 +24,15 @@ header h1 {
     font-size: 2em;
 }
 
-/* ✅ Navigation (Fix for Mobile) */
+/* ✅ Navigation FIX (Now inline on Mobile) */
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Ye ensure karega ki small screens pe break na ho */
+    gap: 15px;
 }
 nav ul li {
     display: inline;
@@ -43,7 +44,7 @@ nav ul li a {
     padding: 10px;
 }
 
-/* ✅ Zig-Zag Section (Desktop View) */
+/* ✅ Zig-Zag Blog Section */
 .features {
     padding: 60px 20px;
 }
@@ -69,18 +70,21 @@ nav ul li a {
     flex-direction: row-reverse;
 }
 
-/* ✅ Contact Section */
+/* ✅ CONTACT SECTION FIX */
 .contact {
-    background: #f4f4f4;
+    background: linear-gradient(45deg, #00a859, #007944);
+    color: white;
     padding: 40px;
     text-align: center;
 }
 .contact a {
-    color: #00a859;
+    color: yellow;
     font-weight: bold;
 }
 .contact .cta {
     margin-top: 20px;
+    background: yellow;
+    color: #007944;
 }
 
 /* ✅ Mobile Responsive Fixes */
@@ -97,7 +101,7 @@ nav ul li a {
 
     /* 🔹 Zig-Zag Responsive Fix */
     .feature {
-        flex-direction: column;
+        flex-direction: column !important; /* Mobile pe sab ek ke neeche ek aayega */
         text-align: center;
     }
     .feature img, .feature-text {
