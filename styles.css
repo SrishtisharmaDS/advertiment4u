@@ -74,12 +74,12 @@ nav ul li a {
     text-align: center;
 }
 .contact a {
-    color: yellow;
+    color: rgb(9, 9, 9);
     font-weight: bold;
 }
 .contact .cta {
     margin-top: 20px;
-    background: yellow;
+    background: rgb(9, 9, 9);
     color: #007944;
 }
 
